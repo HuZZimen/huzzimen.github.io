@@ -1,18 +1,99 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #222;
-    text-align: center;
-    margin: 0;
-    padding: 50px;
+
+:root {
+    --bg: #f4f4f4;
+    --text: #222;
+    --muted: #666;
+    --accent: #2a5bd7;
+    --line: #dcdcdc;
 }
 
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+a {
+    color: var(--accent);
+}
+
+/* ---------- Layout: keeps content in a centered column, text left-aligned ---------- */
+header,
+main,
+footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* ---------- Header ---------- */
 h1 {
     font-size: 40px;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
+}
+
+.tagline {
+    font-size: 18px;
+    color: var(--muted);
+    margin-top: 0;
+}
+
+nav a {
+    margin-right: 16px;
+}
+
+/* ---------- Sections ---------- */
+h2 {
+    margin-top: 50px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
 }
 
 p {
     font-size: 18px;
-    color: #666;
+    color: var(--muted);
+}
+
+/* ---------- Projects ---------- */
+.project {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.project h3 {
+    margin: 0 0 4px;
+}
+
+.project p {
+    margin: 4px 0 12px;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    font-size: 14px;
+    color: var(--muted);
 }
